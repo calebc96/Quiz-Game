@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#front-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15%;
+  width: 50%;
+  margin-left: 25%;
+  
+}
+
+#front-page h1 {
+  text-align: center;
+}
+
+#front-page p {
+  text-align: center;
+  margin-top:8px;
+  margin-bottom:8px;
+}
+
+#start-btn {
+  background-color: darkblue;
+  padding: 6px 14px;
+  border-radius: 5px;
+  border: none;
+}
+
+#start-btn:hover {
+  background-color: rgb(1, 97, 1);
+}
+
+#start-btn:active {
+  background-color: rgb(55, 0, 255);
+}
+
+header {
+  display:flex;
+  justify-content: space-between;
+}
+header p {
+margin: 15px;
+}
+
+
+
