@@ -3,6 +3,14 @@
   margin: 0;
   padding: 0;
 }
+header {
+  display:flex;
+  justify-content: space-between;
+}
+header p {
+margin: 20px 30px;;
+
+}
 
 #front-page {
   display: flex;
@@ -32,20 +40,14 @@
 }
 
 #start-btn:hover {
-  background-color: rgb(1, 97, 1);
+  cursor: pointer;
 }
 
 #start-btn:active {
-  background-color: rgb(55, 0, 255);
+  background-color: rgb(1, 97, 1);
 }
 
-header {
-  display:flex;
-  justify-content: space-between;
-}
-header p {
-margin: 15px;
-}
+
 
 
 
