@@ -66,11 +66,6 @@ startButton.addEventListener("click", function () {
   setTime();
 });
 
-// function startquiz () {
-//   questionBox.children[0].innerHTML = questions[0].title;
-//   questionBox.children[1].innerHTML = questions[0].choices;
-
-// }
 var qIndex = 0;
 
 function startquiz() {
