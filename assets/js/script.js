@@ -61,7 +61,7 @@ function setTime() {
     }
   }, 1000);
 }
-
+//When the start button is clicked the timer runs and the questions display
 startButton.addEventListener("click", function () {
   startquiz();
   setTime();
@@ -86,6 +86,7 @@ function startquiz() {
     answerList.appendChild(correct);
     listItem.addEventListener("click", function (event) {
       let clickedOn = event.target;
+      //If an answer is correct/incorrect it will add the score and show a difference in time
       if (clickedOn.textContent === questions[qIndex].answers) {
         console.log("correct");
         score = score + 20;
@@ -112,6 +113,8 @@ function startquiz() {
     });
   });
 }
+
+//Once the quiz is over the highscore will be displayed in the local storage
 function finished() {
   quiz.innerHTML = "";
   var h1 = document.createElement("h1");
