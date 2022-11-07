@@ -4,6 +4,7 @@ var timer = document.getElementById("keeping-time");
 var quiz = document.getElementById("quiz");
 var question = document.getElementById("question");
 var answerList = document.getElementById("answers");
+var correct = document.getElementById("Correct")
 var score = 0;
 var timePen = 20;
 quiz.style.display = "none";
@@ -71,7 +72,7 @@ var qIndex = 0;
 function startquiz() {
   console.log(qIndex);
   questionBox.style.display = "none";
-  quiz.style.display = "block";
+  quiz.style.display = "flex";
   answerList.innerHTML = "";
   for (var i = 0; i < questions.length; i++) {
     var userQuestion = questions[qIndex].title;
@@ -82,15 +83,20 @@ function startquiz() {
     let listItem = document.createElement("li");
     listItem.innerHTML = setOfQuestions;
     answerList.appendChild(listItem);
+    answerList.appendChild(correct);
     listItem.addEventListener("click", function (event) {
       let clickedOn = event.target;
       if (clickedOn.textContent === questions[qIndex].answers) {
         console.log("correct");
         score = score + 20;
+        correct.innerHTML = "Correct"
+     
+    
       } else {
         console.log("wrong");
         score = score - 20;
         secondsLeft = secondsLeft - timePen;
+        correct.innerHTML = "Incorrect"
       }
       if (score <= 0) {
         score = 0;
@@ -102,7 +108,7 @@ function startquiz() {
         console.log("quiz over", score);
       } else {
         startquiz(qIndex);
-      }
+      } 
     });
   });
 }
@@ -116,6 +122,7 @@ function finished() {
   quiz.append(h4);
   var input = document.createElement("input");
   input.type = "text";
+  input.placeholder = "Type initials here..";
   quiz.append(input);
   var button = document.createElement("button");
   button.type = "submit";
@@ -130,9 +137,7 @@ function finished() {
         initials: initials,
         score: score,
       }; 
-      localStorage.setItem("userInfo", JSON.stringify)
+      localStorage.setItem("userInfo", JSON.stringify(userInfo))
     }
-    console.log(userInfo);
-
   });
 }
