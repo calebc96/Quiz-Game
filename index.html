@@ -10,21 +10,28 @@
 <body>
   <header>
     <p id="highscore">View Highscore</p>
-    <p id="timer">Time:</p>
+    <p id="timer">Timer: <span id="keeping-time">100</span></p>
   </header>
 
  <container id="front-page">
   <h1>
   Coding Quiz Challenge
  </h1>
- <p>
-  Try to answer the code related questions within the time limit. Keep in mind that incorrect answers will effect your time limit. 
-  Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+ <p class="#instructions, answer-list">
+  Try to answer the code related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!
  </p>
- <button id="start-btn">
+
+
+ <button onclick="style.display = 'none'" id="start-btn">
   Start Quiz
 </button>
 </container>
+
+<main id="quiz">
+  <h1 id="question"></h1>
+  <ul id="answers"></ul>
+  <h1 id="Correct"></h1>
+</main>
 
 
   <script src= "assets/js/script.js"></script>

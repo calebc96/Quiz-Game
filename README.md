@@ -1,4 +1,8 @@
 # Quiz-Game
+## User Story
+* AS A coding boot camp student
+* I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
+* SO THAT I can gauge my progress compared to my peers
 ## Acceptance Criteria 
 * GIVEN I am taking a code quiz
 * WHEN I click the start button
@@ -11,3 +15,7 @@
 * THEN the game is over
 * WHEN the game is over
 * THEN I can save my initials and score
+## Mock-up
+![image](https://user-images.githubusercontent.com/111102789/200414597-41c9a75c-8856-467c-92d1-f7d3bd6a8433.png)
+## Live Application URL
+https://calebcarnett.github.io/Quiz-Game/
